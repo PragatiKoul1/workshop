@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0078BE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #B3E6FF;
+            width: 300px;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+
+        .card h2 {
+            font-size: 22px;
+            margin: 10px 0 5px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background-color: #0078BE;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-icons a img {
+            width: 25px;
+            height: 25px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .buttons button {
+            background-color: #28A745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .buttons button:hover {
+            background-color: #218838;
+        }
+
+        .stats {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .stats span {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="tc.jpg" alt="Profile Picture">
+        <h2>Tom Cruise</h2>
+        <p>Full Stack Developer | Tech Enthusiast</p>
+        <div class="social-icons">
+            <a href="#">
+                <img src="fb.jpg" alt="Facebook">
+            </a>
+            <a href="#">
+                <img src="twitter.jpg" alt="Twitter">
+            </a>
+            <a href="#">
+                <img src="insta.jpg" alt="Instagram">
+            </a>
+            <a href="#">
+                <img src="linked.jpg" alt="LinkedIn">
+            </a>
+        </div>
+        <div class="buttons">
+            <button>Subscribe</button>
+            <button>Message</button>
+        </div>
+        <div class="stats">
+            <span>&#x1F60D: 60K</span>
+            <span>&#x1F4AC: 20K</span>
+            <span>&#x1F504: 32K</span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Hover Effects</title>
+  
+
+<style>
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Row Styling */
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Section Styling */
+.section {
+  text-align: center;
+  width: 300px; /* Adjust width as needed */
+}
+
+.section h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+/* Hover Box Styling */
+.hover-box {
+  width: 200px;
+  height: 100px;
+  border: 2px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.hover-box::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+
+/* Sample 1: Fill from Left and Right */
+.box-left-right::before {
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background-color: green;
+  transition: width 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+.box-left-right:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+/* Sample 2: Fill from Bottom to Top */
+.box-bottom-top::before {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: green;
+  transition: height 0.5s ease-in-out;
+}
+
+.box-bottom-top:hover::before {
+  height: 100%;
+}
+
+/* Sample 3: Small Rectangle Fill from Right to Left */
+.box-right-left-small::before {
+  top: 50%;
+  right: 0;
+  width: 0;
+  height: 20%;
+  background-color: green;
+  transform: translateY(-50%);
+  transition: width 0.5s ease-in-out;
+}
+
+.box-right-left-small:hover::before {
+  width: 100%;
+}
+
+/* Sample 4: Red and White Gradient Fill from Right to Left */
+.box-gradient::before {
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to left, red, white);
+  transition: width 0.5s ease-in-out;
+}
+
+.box-gradient:hover::before {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="section">
+        <h2>Sample 1</h2>
+        <div class="hover-box box-left-right">Try Me</div>
+      </div>
+      <div class="section">
+        <h2>Sample 2</h2>
+        <div class="hover-box box-bottom-top">Try Me</div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="section">
+        <h2>Sample 3</h2>
+        <div class="hover-box box-right-left-small">Try Me</div>
+      </div>
+      <div class="section">
+        <h2>Sample 4</h2>
+        <div class="hover-box box-gradient">Try Me</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
